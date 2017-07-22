@@ -51,6 +51,11 @@ class AdminUserscontroller extends Controller
     public function store(Request $request)
     {
         return $request->all();
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ff3cb9ee2699a2307282ce5e4665eeaea1188e29
     }
 
     /**
