@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class AdminUserscontroller extends Controller
+class AdminUsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -103,6 +103,12 @@ class AdminUserscontroller extends Controller
     public function edit($id)
     {
         //
+         $user = User::findOrFail($id);
+
+         $roles = Role::lists('name','id')->all();
+
+         return view('admin.users.edit', compact('user','roles'));
+
     }
 
     /**

@@ -22,7 +22,7 @@ Route::get('/home', 'HomeController@index');
 
 Route::resource('/admin/users' , 'AdminUsersController');
 
-
+Route::get('/admin');
 
 Route::get('/admin', function(){
 

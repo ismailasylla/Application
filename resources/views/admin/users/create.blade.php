@@ -40,7 +40,7 @@
 
             <div class="form-group">
 
-                {!! Form::label('photo_id','Photo:') !!}
+                {!! Form::label('photo_id',':') !!}
                 {!! Form::file('photo_id', ['class'=>'form-control']) !!}
             </div>
 
