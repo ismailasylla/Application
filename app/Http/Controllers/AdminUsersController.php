@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Http\Requests\UsersRequest;
 use App\Photo;
 use App\User;
@@ -107,7 +108,7 @@ class AdminUsersController extends Controller
 
          $roles = Role::lists('name','id')->all();
 
-         return view('admin.users.edit', compact('user','roles'));
+         return view('admin.users.edit', compact('user', 'roles'));
 
     }
 

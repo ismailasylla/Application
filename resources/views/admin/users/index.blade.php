@@ -28,13 +28,13 @@
               <tr>
                 <td>{{$user->id}}</td>
                 <td><img height="50" src="{{$user->photo ? $user->photo->file : 'No User Photo'}}" alt=""></td>
-                <td><a href="{{route('admin.users.edit', $user->edit)}}">{{$user->name}}</a></td>
+                <td><a href="{{route('admin.users.edit', $user->id)}}">{{$user->name}}</a></td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->role->name}}</td>
                 <td> {{$user->is_active==1 ? 'Active': 'Not Active' }} </td>
                 <td>{{$user->created_at->diffForHumans()}}</td>
                 <td>{{$user->updated_at->diffForHumans()}}</td>
-                {{--<td>{{$user->file}}</td>--}}
+
 
 
               </tr>

@@ -8,7 +8,7 @@
     <h1>Edit Users</h1>
 
 
-    {!! Form::open(['method'=>'PATCH','action'=>['AdminUsersController@update', $user->id],'files'=>true]) !!}
+    {!! Form::model($user,['method'=>'PATCH','action'=>['AdminUsersController@update', $user->id],'files'=>true]) !!}
 
     {!! csrf_field() !!}
 
@@ -42,7 +42,7 @@
 
         
         {!! Form::label('photo_id','Photo:') !!}
-        {!! Form::file('photo_id', ['class'=>'form-control']) !!}
+        {!! Form::file('photo_id',null, ['class'=>'form-control']) !!}
 
     </div>
 
