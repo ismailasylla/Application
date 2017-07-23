@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\UsersEditRequest;
 use App\Http\Requests\UsersRequest;
 use App\Photo;
 use App\User;
@@ -119,7 +120,7 @@ class AdminUsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UsersRequest $request, $id)
+    public function update(UsersEditRequest $request, $id)
     {
         //
 
@@ -133,7 +134,18 @@ class AdminUsersController extends Controller
 
             $file->move('images', $name);
 
+            $photo = Photo::create(['file'=>$name]);
+
+            $input['photo_id']= $photo->id;
+
+
+
        }
+
+
+       $user->update($input);
+
+       return redirect('/admin/users');
     }
 
     /**
