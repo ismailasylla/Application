@@ -72,7 +72,6 @@
 
 
 
-
                 {!! Form::close() !!}
 
                 {{--form on submit  Error code --}}
