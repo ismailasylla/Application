@@ -31,3 +31,13 @@ Route::get('/admin', function(){
 
 
 });
+
+Route::group(['middleware'=>'admin'], function(){
+
+
+});
+
+
+
+
+
